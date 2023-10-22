@@ -26,7 +26,7 @@ app.use(function (req, res, next)
 {
 
     // Stio web al que desea permitir que se conecte
-    res.setHeader('Access-Control-Allow-Origin', 'https://deportes-extremos.vercel.app/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://deportes-extremos.vercel.app');
 
     // A que métodos que desea dar permisos
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
