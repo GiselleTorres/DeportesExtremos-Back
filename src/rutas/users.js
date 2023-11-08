@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../modelos/user.model')
 
 //POST./users/register
-router.post('/register',(req, res) => {
+router.post('/register',async (req, res) => {
     try {
         req.body.password = bcrypt.hashSync(req.body.password, 12);
         
@@ -16,7 +16,7 @@ router.post('/register',(req, res) => {
     }
 });
 //POST./users/login
-router.post('/login', (req, res) =>{
+router.post('/login', async (req, res) =>{
     //Comprobar si el mail existe
     const user = await User.findOne({email: req.body.email});
     if (!user){
