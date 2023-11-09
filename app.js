@@ -5,7 +5,7 @@ var path = require('path');//direccion
 var cors = require('cors');
 
 //var conectado = require('./src/conexion/index');
-var users =require('./src/rutas/users');
+//var users =require('./src/rutas/users');
 var respuestaspersonas = require('./src/rutas/TipoRespuestaPersonaRuta');//Ruta
 var catalogou = require('./src/rutas/TipoCatalogoRuta');//Ruta
 var personas = require('./src/rutas/TipoPersonaRuta');//ruta
@@ -44,7 +44,7 @@ app.use(function (req, res, next)
   });
 
   //============================================================
-  app.use('/users',users());
+  //app.use('/users',users());
   app.use('/personas', personas());//ruta para el servicio
   app.use('/catalogou', catalogou());//ruta para el servicio
   app.use('/respuestaspersonas', respuestaspersonas());//ruta para el servicio
